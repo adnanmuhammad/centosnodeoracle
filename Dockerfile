@@ -8,6 +8,7 @@ RUN yum -y update \
   && yum install -y gcc-c++ make \
   && rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm \
   && yum install -y npm git \
+  && npm install -g strongloop \
   && yum install -y curl
 
 #ADD ORACLE INSTANT CLIENT
