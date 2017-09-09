@@ -3,8 +3,6 @@ FROM centos:7
 
 #INSTALL LIBAIO1 & UNZIP (NEEDED FOR STRONG-ORACLE)
 RUN yum -y update \
-  && yum install -y libaio1 \
-  && yum install -y build-essential \
   && yum install -y unzip \
   && yum -y install nodejs \
   && yum install gcc-c++ make \
