@@ -5,8 +5,7 @@ FROM centos:centos6
 RUN yum -y update \
   && yum install -y libaio \
   && yum install -y unzip \
-  && yum install gcc-c++ make \
-  && npm install -g strongloop \
+  && yum install -y gcc-c++ make \
   && yum install -y curl
 
 #ADD ORACLE INSTANT CLIENT
