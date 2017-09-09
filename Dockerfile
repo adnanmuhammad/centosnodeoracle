@@ -1,15 +1,12 @@
-# INSTALL CENTOS
-FROM centos
+# INSTALL UBUNTU
+FROM node:6
 
 #INSTALL LIBAIO1 & UNZIP (NEEDED FOR STRONG-ORACLE)
-RUN yum -y update \
-  && yum install -y libaio1 \
-  && yum install -y build-essential \
-  && yum install -y unzip \
-  && yum -y install nodejs \
-  && yum install gcc-c++ make \
-  && npm install -g strongloop \
-  && yum install -y curl
+RUN apt-get update \
+  && apt-get install -y libaio1 \
+  && apt-get install -y build-essential \
+  && apt-get install -y unzip \
+  && apt-get install -y curl
 
 #ADD ORACLE INSTANT CLIENT
 RUN mkdir -p opt/oracle
