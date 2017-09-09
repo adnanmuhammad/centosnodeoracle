@@ -1,13 +1,15 @@
 # INSTALL CENTOS
-FROM centos:7
+FROM centos:centos6
 
 #INSTALL LIBAIO1 & UNZIP (NEEDED FOR STRONG-ORACLE)
 RUN yum -y update \
-&& yum install -y build-essential \
-&& yum install -y unzip \
-&& yum -y install nodejs \
-&& yum install gcc-c++ make \
-&& yum install -y curl
+  && yum install -y libaio1 \
+  && yum install -y build-essential \
+  && yum install -y unzip \
+  && yum -y install nodejs \
+  && yum install gcc-c++ make \
+  && npm install -g strongloop \
+  && yum install -y curl
 
 #ADD ORACLE INSTANT CLIENT
 RUN mkdir -p opt/oracle
