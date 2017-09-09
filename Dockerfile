@@ -5,7 +5,6 @@ FROM centos:centos6
 RUN yum -y update \
   && yum install -y libaio \
   && yum install -y unzip \
-  && yum -y install nodejs \
   && yum install gcc-c++ make \
   && npm install -g strongloop \
   && yum install -y curl
