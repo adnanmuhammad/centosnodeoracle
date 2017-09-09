@@ -6,7 +6,8 @@ RUN yum -y update \
   && yum install -y libaio \
   && yum install -y unzip \
   && yum install -y gcc-c++ make \
-  && yum -y install nodejs npm \
+  && rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm \
+  && yum install -y npm git \
   && yum install -y curl
 
 #ADD ORACLE INSTANT CLIENT
