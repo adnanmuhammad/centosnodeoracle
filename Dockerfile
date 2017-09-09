@@ -6,6 +6,7 @@ RUN yum -y update \
   && yum install -y libaio \
   && yum install -y unzip \
   && yum install -y gcc-c++ make \
+  && yum -y install nodejs npm \
   && yum install -y curl
 
 #ADD ORACLE INSTANT CLIENT
