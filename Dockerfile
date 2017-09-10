@@ -27,3 +27,8 @@ ENV OCI_LIB_DIR="/opt/oracle/instantclient"
 ENV OCI_INCLUDE_DIR="/opt/oracle/instantclient/sdk/include"
 
 RUN echo '/opt/oracle/instantclient/' | tee -a /etc/ld.so.conf.d/oracle_instant_client.conf && ldconfig
+
+COPY ./myapp /opt/
+RUN cd /opt/myapp
+EXPOSE 8080
+CMD [ "npm", "start" ]
