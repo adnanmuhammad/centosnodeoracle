@@ -1,0 +1,12 @@
+{
+  "rjapp": {
+    "host": "82.70.105.118",
+    "port": 1521,
+    "database": "zorcldb01.zepto.com",
+    "password": "OhE9fF5lUV",
+    "name": "rjapp",
+    "tns": "",
+    "user": "rj_app",
+    "connector": "oracle"
+  }
+}
