@@ -10,4 +10,4 @@ RUN yum -y update \
 COPY ./myapp /opt/myapp
 RUN cd /opt/myapp
 EXPOSE 8080
-CMD [ "npm", "start" ]
+CMD [ "node", "/opt/myapp/app" ]
