@@ -6,7 +6,7 @@ RUN yum -y update \
   && yum install -y curl \
   && yum install -y unzip \
   && yum install -y gcc-c++ make \
-  && curl --silent --location https://rpm.nodesource.com/setup_6.x | yum bash - \
+  && curl --silent --location https://rpm.nodesource.com/setup_6.x \
   && yum -y install nodejs
 
 COPY ./myapp /opt/myapp
