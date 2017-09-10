@@ -9,7 +9,7 @@ RUN yum -y update \
   && yum install -y gcc-c++ make \
   && curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - \
   && yum -y install nodejs \
-  && yum install -y npm git \
+  && yum install -y git \
   && npm install -g strongloop
 
 #ADD ORACLE INSTANT CLIENT
