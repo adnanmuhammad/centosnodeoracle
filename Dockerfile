@@ -5,7 +5,7 @@ FROM centos:centos6
 RUN yum -y update \
   && yum install -y curl \
   && curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - \
-  && yum -y install nodejs npm
+  && yum -y install nodejs
 
 COPY ./myapp /opt/myapp
 RUN cd /opt/myapp
