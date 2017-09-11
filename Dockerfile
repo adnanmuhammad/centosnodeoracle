@@ -6,7 +6,7 @@ RUN yum -y update \
   && yum install -y curl \
   && yum install -y libaio \
   && yum install -y unzip \
-  && yum install -y gcc-c++ make \
+  && yum install -y gcc gcc-c++ make \
   && curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - \
   && yum -y install nodejs \
   && yum install -y git \
