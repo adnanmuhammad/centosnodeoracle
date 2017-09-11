@@ -1,5 +1,5 @@
 # INSTALL CENTOS
-FROM centos:centos6
+FROM centos:centos7
 
 #INSTALL LIBAIO1 & UNZIP (NEEDED FOR STRONG-ORACLE)
 RUN yum -y update \
@@ -24,6 +24,9 @@ ENV TNS_ADMIN=$ORACLE_HOME/network/admin
 
 COPY ./myapp /opt/myapp
 RUN cd /opt/myapp
+
+RUN npm install loopback-connector-oracle --save \
+  && npm install oracledb
 
 EXPOSE 8080
 CMD [ "node", "/opt/myapp/." ]
