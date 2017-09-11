@@ -25,7 +25,4 @@ ENV TNS_ADMIN=$ORACLE_HOME/network/admin
 COPY ./myapp /opt/myapp
 RUN cd /opt/myapp
 
-RUN npm install oracledb
-
-EXPOSE 8080
-CMD [ "node", "/opt/myapp/." ]
+RUN npm install -y oracledb
